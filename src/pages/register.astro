@@ -1,0 +1,63 @@
+---
+import MetaHead from "../components/MetaHead.astro";
+import "/src/styles/register.css";
+---
+<head>
+<MetaHead title="Registro de Candidato" description="Completa tu registro para postularte a empleos" />
+</head>
+
+<!-- Fondo de video -->
+<video class="video-background" autoplay muted loop>
+    <source src="/videos/output.mp4" type="video/mp4">
+    <!-- Fallback para navegadores que no soporten video -->
+    Tu navegador no soporta video HTML5.
+</video>
+
+<!-- Overlay -->
+<div class="overlay"></div>
+
+<!-- Partículas flotantes -->
+<div class="floating-particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+</div>
+
+<!-- Container principal -->
+<div class="main-container">
+    <!-- Líneas decorativas -->
+    <!-- <div class="decorative-line line-1"></div>
+    <div class="decorative-line line-2"></div> -->
+
+    <!-- Tarjeta de registro -->
+    <div class="registration-card">
+        <h1 class="title">Registro</h1>
+        <p class="subtitle">Tu nuevo trabajo te está esperando...</p>
+
+        <div class="form-container">
+            <form id="registrationForm" action="/candidate" method="get">
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input" 
+                        placeholder="tu@email.com"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="continue-btn">
+                    Continuar
+                </button>
+            </form>
+        </div>
+
+        <p class="register-link">
+            ¿Eres reclutador? <a href="/recruiter">Regístrate aquí</a>
+        </p>
+    </div>
+</div>
+
+<script src="/src/scripts/register.js"></script>
