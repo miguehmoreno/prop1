@@ -1,6 +1,12 @@
-import staticAdapter from '@astrojs/adapter-static';
+// astro.config.mjs
+import { defineConfig } from 'astro/config';
 
-export default {
+import netlify from '@astrojs/netlify';
+
+export default defineConfig({
+  // Sitio estático
+  // Sin adapter
   output: 'static',
-  adapter: staticAdapter(),
-};
+
+  adapter: netlify()
+});
